@@ -1,384 +1,283 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Branding by Sunny – Branding & Digital</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Premium branding and digital marketing for modern creators and small brands." />
+<style>
+  /* v3.0 — Light Premium Theme */
 
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  :root {
+    /* Core palette */
+    --bg: #FAF9F7;        /* warm white main background */
+    --bg-soft: #F1EEE9;   /* light beige background */
+    --card: #FFFFFF;      /* clean white cards */
+    --soft-black: #0B0B0C;
+    --charcoal: #2E2E32;
 
-    <style>
-    :root {
-      /* Core palette */
-      --bg: #FAF9F7;        /* warm white */
-      --bg-soft: #F1EEE9;   /* very light background */
-      --card: #FFFFFF;      /* white cards */
-      --soft-black: #0B0B0C;
-      --charcoal: #2E2E32;
+    /* Accents */
+    --accent: #C7A972;    /* muted gold */
+    --border: #D9D9DD;    /* fog grey for lines */
 
-      /* Accent */
-      --accent: #C7A972;    /* muted gold */
-      --border: #D9D9DD;    /* fog grey for lines */
+    /* Text */
+    --text: #0B0B0C;
+    --muted: #5F6067;
 
-      /* Text */
-      --text: #0B0B0C;
-      --muted: #5F6067;
+    /* Layout */
+    --radius: 18px;
+    --max-width: 900px;
+  }
 
-      --radius: 18px;
-      --max-width: 900px;
-    }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #FFFFFF 0, var(--bg-soft) 55%);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
 
-    body {
-      font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #FFFFFF 0, var(--bg-soft) 55%);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-    }
+  a { color: inherit; text-decoration: none; }
 
-    a { color: inherit; text-decoration: none; }
+  .page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+  .shell {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+  }
 
-    .shell {
-      width: 100%;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 24px 16px 40px;
-    }
+  /* HEADER */
 
-    /* NAVBAR */
+  header {
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(14px);
+    background: rgba(250, 249, 247, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
 
-    header {
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(14px);
-      background: rgba(250, 249, 247, 0.9);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+  .nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
 
-    .nav {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
+  .logo {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--soft-black);
+  }
 
-    .logo {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--soft-black);
-    }
+  .logo-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 0, #FFFFFF, var(--accent) 40%, #E0D4BC 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  }
 
-    .logo-dot {
-      width: 20px;
-      height: 20px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 0, #FFFFFF, var(--accent) 40%, #E0D4BC 100%);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-    }
+  .nav-links {
+    display: flex;
+    gap: 16px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+  }
 
-    .nav-links {
-      display: flex;
-      gap: 16px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-    }
+  .nav-links a {
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+  }
 
-    .nav-links a {
-      padding-bottom: 2px;
-      border-bottom: 1px solid transparent;
-    }
+  .nav-links a:hover {
+    border-color: var(--accent);
+  }
 
-    .nav-links a:hover {
-      border-color: var(--accent);
-    }
+  main { flex: 1; }
+  section { padding: 32px 0; }
 
-    main { flex: 1; }
-    section { padding: 32px 0; }
+  /* HERO */
 
-    /* HERO */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 12px;
+  }
 
-    .hero {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-top: 12px;
-    }
+  .hero-kicker {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+  }
 
-    .hero-kicker {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-    }
+  .hero-title {
+    font-size: clamp(28px, 5vw, 36px);
+    line-height: 1.1;
+    color: var(--soft-black);
+  }
 
-    .hero-title {
-      font-size: clamp(28px, 5vw, 36px);
-      line-height: 1.1;
-      color: var(--soft-black);
-    }
+  .hero-title span {
+    background: linear-gradient(120deg, var(--accent), #E2CDA0);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
 
-    .hero-title span {
-      background: linear-gradient(120deg, var(--accent), #E2CDA0);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
+  .hero-subtitle,
+  .page-subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 34rem;
+    line-height: 1.6;
+  }
 
-    .hero-subtitle,
-    .page-subtitle {
-      font-size: 14px;
-      color: var(--muted);
-      max-width: 34rem;
-      line-height: 1.6;
-    }
+  .hero-note {
+    font-size: 12px;
+    color: var(--muted);
+  }
 
-    .hero-note {
-      font-size: 12px;
-      color: var(--muted);
-    }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid #E1D5B7;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 11px;
+    background: linear-gradient(135deg, var(--accent), #E2CDA0);
+    color: var(--soft-black);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+  }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 16px;
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid #E1D5B7;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 11px;
-      background: linear-gradient(135deg, var(--accent), #E2CDA0);
-      color: var(--soft-black);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-      cursor: pointer;
-    }
+  /* CONTACT CARD / SHARED CARD STYLE */
 
-    /* GENERIC CARDS / LAYOUT USED ON BOTH PAGES */
+  .card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 18px 16px 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04);
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 18px;
+  }
 
-    .card,
-    .case-card {
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 16px 16px 18px;
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04);
-    }
+  .card-text {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
 
+  .pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+  }
+
+  .pill {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--charcoal);
+    background: #F6F4F0;
+  }
+
+  /* CASE STUDIES PAGE COMPONENTS */
+
+  .page-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: var(--soft-black);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .case-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 16px 16px 18px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04);
+  }
+
+  .case-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .case-title {
+    font-size: 16px;
+    color: var(--soft-black);
+    margin-bottom: 6px;
+  }
+
+  .case-text {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .case-metrics {
+    font-size: 12px;
+    color: var(--charcoal);
+  }
+
+  /* FOOTER */
+
+  footer {
+    border-top: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--muted);
+    background: rgba(250, 249, 247, 0.9);
+  }
+
+  .footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 12px 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  /* RESPONSIVE */
+
+  @media (max-width: 700px) {
     .card {
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 18px;
-    }
-
-    .card-text,
-    .case-text {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 12px 0;
-    }
-
-    .pill {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--charcoal);
-      background: #F6F4F0;
-    }
-
-    .page-title {
-      font-size: 24px;
-      margin-bottom: 8px;
-      color: var(--soft-black);
-    }
-
-    .grid {
-      display: grid;
       grid-template-columns: minmax(0, 1fr);
-      gap: 16px;
     }
-
-    .case-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-      margin-bottom: 6px;
+    .nav-links {
+      font-size: 10px;
     }
+  }
 
-    .case-title {
-      font-size: 16px;
-      margin-bottom: 6px;
-      color: var(--soft-black);
-    }
-
-    .case-metrics {
-      font-size: 12px;
-      color: var(--charcoal);
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      font-size: 11px;
-      color: var(--muted);
-      background: rgba(250, 249, 247, 0.9);
-    }
-
-    .footer-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 12px 16px 20px;
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 700px) {
-      .card {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .nav-links {
-        font-size: 10px;
-      }
-    }
-  </style>
-
-</head>
-<body>
-  <div class="page">
-    <header>
-      <nav class="nav">
-        <a href="index.html" class="logo">
-          <span class="logo-dot"></span>
-          <span>Brands by Sunny</span>
-        </a>
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="case-studies.html">Case Studies</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <div class="shell">
-        <!-- HERO -->
-        <section>
-          <div class="hero">
-            <p class="hero-kicker">Branding & digital</p>
-            <h1 class="hero-title">
-              Minimal, premium <span>branding</span> for modern creators & small brands.
-            </h1>
-            <p class="hero-subtitle">
-              Strategy, visuals, and simple funnels that make you look as put-together online
-              as you are behind the scenes — without feeling loud or salesy.
-            </p>
-            <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
-              Book a quick intro call
-            </button>
-            <p class="hero-note">
-              1:1, done-with-you, and done-for-you options depending on how hands-on you want to be.
-            </p>
-          </div>
-        </section>
-
-        <!-- CONTACT / TALLY FORM -->
-        <section id="contact">
-          <div class="card">
-            <div>
-              <p class="card-text">
-                Share a bit about your brand and what you’re working on. I’ll reply with next
-                steps, a quick Loom if helpful, and an option to book a call — no pressure.
-              </p>
-              <div class="pill-row">
-                <span class="pill">Brand strategy</span>
-                <span class="pill">Visual identity</span>
-                <span class="pill">Launch pages</span>
-              </div>
-              <p class="card-text">
-                Not sure exactly what you need? That’s okay — you can just explain where
-                you’re stuck and we’ll figure it out together.
-              </p>
-            </div>
-
-            <div>
-              <!-- Tally form embed -->
-              <iframe
-                data-tally-src="https://tally.so/embed/aQ99aW?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                loading="lazy"
-                width="100%"
-                height="276"
-                frameborder="0"
-                marginheight="0"
-                marginwidth="0"
-                title="Contact form"></iframe>
-
-              <script>
-                var d=document,w="https://tally.so/widgets/embed.js",
-                v=function(){
-                  if(typeof Tally!=="undefined"){
-                    Tally.loadEmbeds();
-                  }else{
-                    d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){
-                      e.src=e.dataset.tallySrc;
-                    });
-                  }
-                };
-                if(typeof Tally!=="undefined") v();
-                else if(d.querySelector('script[src="'+w+'"]')==null){
-                  var s=d.createElement("script");
-                  s.src=w; s.onload=v; s.onerror=v;
-                  d.body.appendChild(s);
-                }
-              </script>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
-
-    <footer>
-      <div class="footer-inner">
-        <span>© <span id="year"></span> Brands by Sunny</span>
-        <span>brandingbysunny.com</span>
-      </div>
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+</style>
