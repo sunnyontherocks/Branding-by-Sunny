@@ -1,17 +1,66 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Cache Busting (forces browser to load newest version) -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <title>Brands by Sunny – Branding & Digital</title>
+  <meta name="description" content="Minimal, premium branding and digital marketing for modern creators and small brands." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles (v2.0 – bump this number whenever you update design to force a refresh) -->
+  <style>
+    /* v2.0 */
+
+    :root {
+      /* Core palette */
+      --bg: #FAF9F7;
+      --bg-soft: #F1EEE9;
+      --card: #FFFFFF;
+      --soft-black: #0B0B0C;
+      --charcoal: #2E2E32;
+
+      /* Accent */
+      --accent: #C7A972;
+
+      /* Lines / subtle borders */
+      --border: #D9D9DD;
+
+      /* Text */
+      --text: #0B0B0C;
+      --muted: #5F6067;
+
+      --radius: 18px;
+      --max-width: 900px;
+    }
+
+    /* (KEEP ALL YOUR EXISTING STYLES BELOW HERE) */
+  </style>
+</head>
 <style>
-  /* v3.0 — Light Premium Theme */
+  /* v4.0 — Creative Luxury theme */
 
   :root {
     /* Core palette */
     --bg: #FAF9F7;        /* warm white main background */
-    --bg-soft: #F1EEE9;   /* light beige background */
+    --bg-soft: #F1EEE9;   /* light beige wash */
     --card: #FFFFFF;      /* clean white cards */
     --soft-black: #0B0B0C;
     --charcoal: #2E2E32;
 
     /* Accents */
     --accent: #C7A972;    /* muted gold */
-    --border: #D9D9DD;    /* fog grey for lines */
+    --accent-soft: #E8DDC5;
+
+    /* Lines / subtle borders */
+    --border: #D9D9DD;    /* fog grey */
 
     /* Text */
     --text: #0B0B0C;
@@ -22,16 +71,23 @@
     --max-width: 900px;
   }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
   body {
     font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: radial-gradient(circle at top, #FFFFFF 0, var(--bg-soft) 55%);
+    background: radial-gradient(circle at top, #FFFFFF 0, var(--bg-soft) 52%, var(--bg) 100%);
     color: var(--text);
     -webkit-font-smoothing: antialiased;
   }
 
-  a { color: inherit; text-decoration: none; }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
   .page {
     min-height: 100vh;
@@ -43,15 +99,15 @@
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 24px 16px 40px;
+    padding: 28px 16px 44px;
   }
 
-  /* HEADER */
+  /* HEADER / NAV */
 
   header {
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(14px);
-    background: rgba(250, 249, 247, 0.9);
+    background: rgba(250, 249, 247, 0.94);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -68,63 +124,73 @@
   }
 
   .logo {
-    font-size: 14px;
+    font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.22em;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 9px;
     color: var(--soft-black);
   }
 
   .logo-dot {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     border-radius: 999px;
-    background: radial-gradient(circle at 30% 0, #FFFFFF, var(--accent) 40%, #E0D4BC 100%);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    background: radial-gradient(circle at 25% 0, #FFFFFF, var(--accent) 40%, #D0BE95 100%);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.7),
+      0 6px 14px rgba(0, 0, 0, 0.15);
   }
 
   .nav-links {
     display: flex;
-    gap: 16px;
+    gap: 18px;
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
     color: var(--muted);
   }
 
   .nav-links a {
-    padding-bottom: 2px;
+    padding-bottom: 3px;
     border-bottom: 1px solid transparent;
+    transition: border-color 0.18s ease, color 0.18s ease, opacity 0.18s ease;
   }
 
   .nav-links a:hover {
     border-color: var(--accent);
+    color: var(--soft-black);
+    opacity: 0.9;
   }
 
-  main { flex: 1; }
-  section { padding: 32px 0; }
+  main {
+    flex: 1;
+  }
+
+  section {
+    padding: 36px 0;
+  }
 
   /* HERO */
 
   .hero {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin-top: 12px;
+    gap: 18px;
+    margin-top: 6px;
   }
 
   .hero-kicker {
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.2em;
     color: var(--muted);
   }
 
   .hero-title {
-    font-size: clamp(28px, 5vw, 36px);
-    line-height: 1.1;
+    font-size: clamp(30px, 5.2vw, 38px);
+    line-height: 1.08;
     color: var(--soft-black);
   }
 
@@ -139,7 +205,7 @@
     font-size: 14px;
     color: var(--muted);
     max-width: 34rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   .hero-note {
@@ -151,37 +217,51 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-top: 16px;
-    padding: 10px 18px;
+    margin-top: 18px;
+    padding: 11px 20px;
     border-radius: 999px;
     border: 1px solid #E1D5B7;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
     font-size: 11px;
     background: linear-gradient(135deg, var(--accent), #E2CDA0);
     color: var(--soft-black);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
     cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
   }
 
-  /* CONTACT CARD / SHARED CARD STYLE */
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
+    filter: brightness(1.03);
+  }
+
+  /* CONTACT CARD / SHARED CARD */
 
   .card {
     background: var(--card);
     border-radius: var(--radius);
-    padding: 18px 16px 20px;
+    padding: 20px 18px 22px;
     border: 1px solid var(--border);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04);
-    margin-top: 18px;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.06);
+    margin-top: 22px;
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-    gap: 18px;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 20px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.09);
+    border-color: var(--accent-soft);
   }
 
   .card-text {
     font-size: 13px;
     color: var(--muted);
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
   .pill-row {
@@ -194,7 +274,7 @@
   .pill {
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
     padding: 6px 10px;
     border-radius: 999px;
     border: 1px solid var(--border);
@@ -206,28 +286,35 @@
 
   .page-title {
     font-size: 24px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color: var(--soft-black);
   }
 
   .grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 16px;
+    gap: 18px;
   }
 
   .case-card {
     background: var(--card);
     border-radius: var(--radius);
-    padding: 16px 16px 18px;
+    padding: 18px 16px 20px;
     border: 1px solid var(--border);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+
+  .case-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.09);
+    border-color: var(--accent-soft);
   }
 
   .case-label {
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.2em;
     color: var(--muted);
     margin-bottom: 6px;
   }
@@ -241,7 +328,7 @@
   .case-text {
     font-size: 13px;
     color: var(--muted);
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 10px;
   }
 
@@ -256,7 +343,7 @@
     border-top: 1px solid var(--border);
     font-size: 11px;
     color: var(--muted);
-    background: rgba(250, 249, 247, 0.9);
+    background: rgba(250, 249, 247, 0.96);
   }
 
   .footer-inner {
@@ -277,7 +364,7 @@
     }
     .nav-links {
       font-size: 10px;
+      gap: 12px;
     }
   }
-
 </style>
