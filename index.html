@@ -19,7 +19,7 @@
 
   <!-- Styles -->
   <style>
-    /* v4.1 — Creative Luxury theme with spacing scale */
+    /* v4.2 — Creative Luxury theme (Structured Premium) */
 
     :root {
       /* Core palette */
@@ -44,13 +44,12 @@
       --radius: 18px;
       --max-width: 900px;
 
-      /* Spacing scale (luxury-inspired) */
+      /* Spacing scale (structured premium) */
       --space-xs: 6px;
       --space-sm: 10px;
       --space-md: 18px;
-      --space-lg: 28px;
+      --space-lg: 26px;
       --space-xl: 40px;
-      --space-2xl: 56px;
     }
 
     * {
@@ -150,7 +149,7 @@
       flex: 1;
     }
 
-    /* Remove default section padding; we control via .section-block */
+    /* Remove default section padding; controlled via .section-block */
     section {
       padding: 0;
     }
@@ -158,7 +157,7 @@
     /* Generic section helpers */
 
     .section-block {
-      padding: var(--space-xl) 0;
+      padding: var(--space-lg) 0;
     }
 
     .section-title {
@@ -301,6 +300,32 @@
       background: #F6F4F0;
     }
 
+    /* Tighter spacing for How I Help & Digital Capabilities (structured, not floaty) */
+    .how-i-help.section-block,
+    .capabilities.section-block {
+      padding: var(--space-md) 0;
+    }
+
+    .how-i-help .section-text,
+    .capabilities .section-text {
+      margin-bottom: var(--space-sm);
+    }
+
+    .how-i-help .pill-row {
+      margin: var(--space-xs) 0;
+    }
+
+    .how-i-help .stack,
+    .capabilities .stack {
+      margin-top: var(--space-xs);
+      gap: var(--space-xs);
+    }
+
+    /* Slightly tighter connection between How I Help → Digital Capabilities */
+    .capabilities.section-block {
+      padding-top: var(--space-sm);
+    }
+
     /* SCROLL REVEAL ANIMATIONS */
 
     .reveal {
@@ -362,7 +387,7 @@
       }
 
       .section-block {
-        padding: var(--space-lg) 0;
+        padding: var(--space-md) 0;
       }
 
       .nav-links {
@@ -402,7 +427,7 @@
               with simple, strategic campaigns across social, streaming, Amazon, and mobile.
             </p>
             <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
-              Book a strategy call
+              Let's Talk Strategy
             </button>
             <p class="hero-note">
               Powered by advanced digital tools through Lockwood Digital Solutions & Vici — delivered with a personal, one-on-one approach.
