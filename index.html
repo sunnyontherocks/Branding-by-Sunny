@@ -19,22 +19,22 @@
 
   <!-- Styles -->
   <style>
-    /* v4.2 — Creative Luxury theme (Structured Premium) */
+    /* v4.3 — Structured Premium */
 
     :root {
       /* Core palette */
-      --bg: #FAF9F7;        /* warm white main background */
-      --bg-soft: #F1EEE9;   /* light beige wash */
-      --card: #FFFFFF;      /* clean white cards */
+      --bg: #FAF9F7;
+      --bg-soft: #F1EEE9;
+      --card: #FFFFFF;
       --soft-black: #0B0B0C;
       --charcoal: #2E2E32;
 
       /* Accents */
-      --accent: #C7A972;    /* muted gold */
+      --accent: #C7A972;
       --accent-soft: #E8DDC5;
 
-      /* Lines / subtle borders */
-      --border: #D9D9DD;    /* fog grey */
+      /* Lines */
+      --border: #D9D9DD;
 
       /* Text */
       --text: #0B0B0C;
@@ -44,12 +44,12 @@
       --radius: 18px;
       --max-width: 900px;
 
-      /* Spacing scale (structured premium) */
-      --space-xs: 6px;
-      --space-sm: 10px;
-      --space-md: 18px;
-      --space-lg: 26px;
-      --space-xl: 40px;
+      /* Spacing scale (structured, not floaty) */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
     }
 
     * {
@@ -149,7 +149,7 @@
       flex: 1;
     }
 
-    /* Remove default section padding; controlled via .section-block */
+    /* No default section padding; everything is via .section-block */
     section {
       padding: 0;
     }
@@ -159,7 +159,7 @@
     .section-block {
       padding: var(--space-lg) 0;
     }
-https://github.com/sunnyontherocks/Branding-by-Sunny/blob/main/index.html
+
     .section-title {
       font-size: 20px;
       margin-bottom: var(--space-sm);
@@ -171,6 +171,7 @@ https://github.com/sunnyontherocks/Branding-by-Sunny/blob/main/index.html
       font-size: 14px;
       color: var(--muted);
       line-height: 1.7;
+      margin-bottom: var(--space-md); /* single controlled margin */
     }
 
     .stack {
@@ -300,31 +301,32 @@ https://github.com/sunnyontherocks/Branding-by-Sunny/blob/main/index.html
       background: #F6F4F0;
     }
 
-    /* Tighter spacing for How I Help & Digital Capabilities (structured, not floaty) */
+    /* Tighter spacing for How I Help & Digital Capabilities */
+
     .how-i-help.section-block,
     .capabilities.section-block {
-      padding-top: 10px !important;
-      padding-botom: 14px !important;
+      padding-top: var(--space-md);  /* 16px */
+      padding-bottom: var(--space-md);
     }
 
     .how-i-help .section-text,
     .capabilities .section-text {
-      margin-bottom: 8px !important;
+      margin-bottom: var(--space-sm); /* 8px */
     }
 
     .how-i-help .pill-row {
-      margin-bottom: 6px 0 !important;
+      margin: var(--space-xs) 0; /* 4px top/bottom */
     }
 
     .how-i-help .stack,
     .capabilities .stack {
-      margin-top: 6px !important;
-      gap: 6px !important;
+      margin-top: var(--space-xs);
+      gap: var(--space-xs);
     }
 
     /* Slightly tighter connection between How I Help → Digital Capabilities */
     .capabilities.section-block {
-      padding-top: var(--space-sm);
+      padding-top: var(--space-sm); /* 8px above Digital Capabilities */
     }
 
     /* SCROLL REVEAL ANIMATIONS */
@@ -428,7 +430,7 @@ https://github.com/sunnyontherocks/Branding-by-Sunny/blob/main/index.html
               with simple, strategic campaigns across social, streaming, Amazon, and mobile.
             </p>
             <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
-              Let's Talk Strategy
+              Let’s Talk Strategy
             </button>
             <p class="hero-note">
               Powered by advanced digital tools through Lockwood Digital Solutions & Vici — delivered with a personal, one-on-one approach.
@@ -439,13 +441,13 @@ https://github.com/sunnyontherocks/Branding-by-Sunny/blob/main/index.html
         <!-- HOW I HELP -->
         <section class="section-block how-i-help reveal">
           <h2 class="section-title">How I Help</h2>
-          <p class="section-text" style="margin-bottom: var(--space-md);">
+          <p class="section-text">
             I help growth-focused businesses get clear on their brand and reach more of the right customers with
             strategic, modern marketing. Every plan starts with clarity, uses the right channels for your goals,
             and keeps things simple enough to understand — but powerful enough to scale.
           </p>
 
-          <div class="pill-row" style="margin-bottom: var(--space-sm);">
+          <div class="pill-row">
             <span class="pill">Brand Positioning</span>
             <span class="pill">Digital Campaigns</span>
             <span class="pill">Lead Generation</span>
@@ -474,7 +476,7 @@ https://github.com/sunnyontherocks/Branding-by-Sunny/blob/main/index.html
         <!-- DIGITAL CAPABILITIES -->
         <section class="section-block capabilities reveal">
           <h2 class="section-title">Digital Capabilities</h2>
-          <p class="section-text" style="margin-bottom: var(--space-md);">
+          <p class="section-text">
             Through Lockwood Digital Solutions and Vici’s advanced tools, I run strategic, multi-channel advertising
             campaigns designed to reach your exact audience — not just anyone online.
           </p>
@@ -540,12 +542,12 @@ https://github.com/sunnyontherocks/Branding-by-Sunny/blob/main/index.html
         <!-- ABOUT SUNNY -->
         <section class="section-block about-sunny reveal">
           <h2 class="section-title">About Sunny</h2>
-          <p class="section-text" style="margin-bottom: var(--space-sm);">
+          <p class="section-text">
             I’m Sunny — a brand and digital strategist who helps growth-focused businesses move from guessing to
             growing. I combine brand clarity with advanced digital tools through Lockwood Digital Solutions and Vici
             to create campaigns that actually reach the right people.
           </p>
-          <p class="section-text">
+          <p class="section-text" style="margin-bottom: 0;">
             My approach is personal, transparent, and rooted in making sure you always understand what’s happening,
             why it matters, and how each strategy supports your goals.
           </p>
@@ -554,7 +556,7 @@ https://github.com/sunnyontherocks/Branding-by-Sunny/blob/main/index.html
         <!-- CONTACT / TALLY FORM -->
         <section id="contact" class="section-block reveal">
           <h2 class="section-title">Start Your Strategy</h2>
-          <p class="section-text" style="margin-bottom: var(--space-md);">
+          <p class="section-text">
             Answer a few quick questions so I can understand your goals and recommend the right next steps. I’ll follow
             up with a short, focused response — and an option to book a call if it makes sense.
           </p>
