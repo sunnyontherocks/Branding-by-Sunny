@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -19,7 +19,7 @@ head>
 
   <!-- Styles -->
   <style>
-    /* v4.4 — Structured Premium, tightened gaps */
+    /* v4.5 — Structured Premium, zero gap between capabilities & about */
 
     :root {
       /* Core palette */
@@ -149,7 +149,7 @@ head>
       flex: 1;
     }
 
-    /* No default section padding; everything is controlled via .section-block */
+    /* Reset default section padding */
     section {
       padding: 0;
     }
@@ -305,32 +305,38 @@ head>
 
     .how-i-help.section-block,
     .capabilities.section-block {
-      padding-top: var(--space-md);   /* 16px */
+      padding-top: var(--space-md);
       padding-bottom: var(--space-md);
     }
 
     .how-i-help .section-text,
     .capabilities .section-text {
-      margin-bottom: var(--space-sm); /* 8px */
+      margin-bottom: var(--space-sm);
     }
 
     .how-i-help .pill-row {
-      margin: var(--space-xs) 0;      /* 4px */
+      margin: var(--space-xs) 0;
     }
 
     .how-i-help .stack,
     .capabilities .stack {
-      margin-top: var(--space-xs);    /* 4px */
-      gap: var(--space-xs);           /* 4px */
+      margin-top: var(--space-xs);
+      gap: var(--space-xs);
     }
 
-    /* Specifically shrink gap between Digital Capabilities → About Sunny */
+    /* 🔥 Zero (almost) gap between Digital Capabilities → About Sunny */
     .capabilities.section-block {
-      padding-bottom: var(--space-sm);   /* 8px */
+      padding-bottom: 0 !important;
+      margin-bottom: 0 !important;
     }
 
     .about-sunny.section-block {
-      padding-top: var(--space-sm);      /* 8px */
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+
+    .about-sunny .section-title {
+      margin-top: 0 !important;
     }
 
     .about-sunny .section-text {
@@ -408,11 +414,11 @@ head>
       }
 
       .capabilities.section-block {
-        padding-bottom: var(--space-xs);
+        padding-bottom: 0 !important;
       }
 
       .about-sunny.section-block {
-        padding-top: var(--space-xs);
+        padding-top: 0 !important;
       }
 
       .nav-links {
