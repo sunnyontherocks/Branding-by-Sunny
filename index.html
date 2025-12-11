@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -19,7 +19,7 @@
 
   <!-- Styles -->
   <style>
-    /* v4.3 — Structured Premium */
+    /* v4.4 — Structured Premium, tightened gaps */
 
     :root {
       /* Core palette */
@@ -44,7 +44,7 @@
       --radius: 18px;
       --max-width: 900px;
 
-      /* Spacing scale (structured, not floaty) */
+      /* Spacing scale */
       --space-xs: 4px;
       --space-sm: 8px;
       --space-md: 16px;
@@ -149,7 +149,7 @@
       flex: 1;
     }
 
-    /* No default section padding; everything is via .section-block */
+    /* No default section padding; everything is controlled via .section-block */
     section {
       padding: 0;
     }
@@ -171,7 +171,7 @@
       font-size: 14px;
       color: var(--muted);
       line-height: 1.7;
-      margin-bottom: var(--space-md); /* single controlled margin */
+      margin-bottom: var(--space-md);
     }
 
     .stack {
@@ -305,7 +305,7 @@
 
     .how-i-help.section-block,
     .capabilities.section-block {
-      padding-top: var(--space-md);  /* 16px */
+      padding-top: var(--space-md);   /* 16px */
       padding-bottom: var(--space-md);
     }
 
@@ -315,18 +315,26 @@
     }
 
     .how-i-help .pill-row {
-      margin: var(--space-xs) 0; /* 4px top/bottom */
+      margin: var(--space-xs) 0;      /* 4px */
     }
 
     .how-i-help .stack,
     .capabilities .stack {
-      margin-top: var(--space-xs);
-      gap: var(--space-xs);
+      margin-top: var(--space-xs);    /* 4px */
+      gap: var(--space-xs);           /* 4px */
     }
 
-    /* Slightly tighter connection between How I Help → Digital Capabilities */
+    /* Specifically shrink gap between Digital Capabilities → About Sunny */
     .capabilities.section-block {
-      padding-top: var(--space-sm); /* 8px above Digital Capabilities */
+      padding-bottom: var(--space-sm);   /* 8px */
+    }
+
+    .about-sunny.section-block {
+      padding-top: var(--space-sm);      /* 8px */
+    }
+
+    .about-sunny .section-text {
+      margin-bottom: var(--space-sm);
     }
 
     /* SCROLL REVEAL ANIMATIONS */
@@ -391,6 +399,20 @@
 
       .section-block {
         padding: var(--space-md) 0;
+      }
+
+      .how-i-help.section-block,
+      .capabilities.section-block {
+        padding-top: var(--space-sm);
+        padding-bottom: var(--space-sm);
+      }
+
+      .capabilities.section-block {
+        padding-bottom: var(--space-xs);
+      }
+
+      .about-sunny.section-block {
+        padding-top: var(--space-xs);
       }
 
       .nav-links {
